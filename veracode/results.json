@@ -1,0 +1,161 @@
+{
+  "_links": {
+    "root": {
+      "href": "/"
+    },
+    "self": {
+      "href": "/scans/a017a0d4-3233-4bf7-b3ff-d5f15e79e4ff/findings"
+    },
+    "help": {
+      "href": "https://help.veracode.com/reader/tS9CaFwL4_lbIEWWomsJoA/ovfZGgu96UINQxIuTqRDwg"
+    }
+  },
+  "scan_id": "a017a0d4-3233-4bf7-b3ff-d5f15e79e4ff",
+  "scan_status": "SUCCESS",
+  "message": "Scan successful. Results size: 9368 bytes",
+  "modules": [
+    "Content/D_C/a/1/s/Tiger/obj/Release/Package/PackageTmp/bin/App_Web__layout.cshtml.639c3968.dll",
+    "Content/D_C/a/1/s/Tiger/obj/Release/Package/PackageTmp/bin/Miso.dll"
+  ],
+  "modules_count": 2,
+  "findings": [
+    {
+      "title": "Create",
+      "issue_id": 1000,
+      "gob": "B",
+      "severity": 3,
+      "issue_type_id": "crypto",
+      "issue_type": "Cross-Site Request Forgery (CSRF)",
+      "cwe_id": "352",
+      "display_text": "\u003cspan\u003eThe ASP.NET MVC Core Controller action does not appear to have protection against cross-site request forgery attacks. The Create() action could allow a malicious web application to influence the interactions between (trusted) client browser and web-server. If the application relies on authentication tokens that are stored inside of a cookie, this attack is possible because the browser will automatically include this cookie with every request.\u003c/span\u003e\u003cspan\u003eMake sure to use the built-in anti-forgery token support of ASP.NET MVC Core. By default the ASP.NET MVC FormHelper will inject a token in each of the used Views. Each Controller HTTP POST action method needs to be annotated with [ValidateForgeryToken] or use [AutoValidateAntiforgeryToken] annotation on the Controller class. It\u0027s also possible to apply AutoValidateForgeryTokenAttribute as a filter in the MVC pipeline which will remove the need for each method being annotated separately. This uses a Synchronizer Token Pattern (STP) that will add the nonce (unique and unpredictable) to each request that can be verified on the server side and unable for an attacker to predict.\u003c/span\u003e\u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/352.html\"\u003eCWE\u003c/a\u003e\u003ca href\u003d\"https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery\"\u003ePrevent Cross-Site Request Forgery (XSRF/CSRF) attacks in ASP.NET Core\u003c/a\u003e\u003ca href\u003d\"https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md\"\u003eOWASP\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "a/1/s/tiger/controllers/coursescontroller.cs",
+          "line": 48,
+          "function_name": "Create",
+          "qualified_function_name": "tiger_dll.Tiger.Controllers.CoursesController.Create",
+          "function_prototype": "System.Web.Mvc.ActionResult Create(Models.Course)",
+          "scope": "tiger_dll.Tiger.Controllers.CoursesController"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "1823038462",
+        "prototype_hash": "819993690",
+        "flaw_hash": "1823038462",
+        "flaw_hash_count": 1,
+        "flaw_hash_ordinal": 1,
+        "cause_hash": "0",
+        "cause_hash_count": 0,
+        "cause_hash_ordinal": 0,
+        "cause_hash2": "0",
+        "cause_hash2_ordinal": "0"
+      },
+      "stack_dumps": {},
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v5/net/352.html"
+    },
+    {
+      "title": "Edit",
+      "issue_id": 1001,
+      "gob": "B",
+      "severity": 3,
+      "issue_type_id": "crypto",
+      "issue_type": "Cross-Site Request Forgery (CSRF)",
+      "cwe_id": "352",
+      "display_text": "\u003cspan\u003eThe ASP.NET MVC Core Controller action does not appear to have protection against cross-site request forgery attacks. The Edit() action could allow a malicious web application to influence the interactions between (trusted) client browser and web-server. If the application relies on authentication tokens that are stored inside of a cookie, this attack is possible because the browser will automatically include this cookie with every request.\u003c/span\u003e\u003cspan\u003eMake sure to use the built-in anti-forgery token support of ASP.NET MVC Core. By default the ASP.NET MVC FormHelper will inject a token in each of the used Views. Each Controller HTTP POST action method needs to be annotated with [ValidateForgeryToken] or use [AutoValidateAntiforgeryToken] annotation on the Controller class. It\u0027s also possible to apply AutoValidateForgeryTokenAttribute as a filter in the MVC pipeline which will remove the need for each method being annotated separately. This uses a Synchronizer Token Pattern (STP) that will add the nonce (unique and unpredictable) to each request that can be verified on the server side and unable for an attacker to predict.\u003c/span\u003e\u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/352.html\"\u003eCWE\u003c/a\u003e\u003ca href\u003d\"https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery\"\u003ePrevent Cross-Site Request Forgery (XSRF/CSRF) attacks in ASP.NET Core\u003c/a\u003e\u003ca href\u003d\"https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md\"\u003eOWASP\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "a/1/s/tiger/controllers/coursescontroller.cs",
+          "line": 79,
+          "function_name": "Edit",
+          "qualified_function_name": "tiger_dll.Tiger.Controllers.CoursesController.Edit",
+          "function_prototype": "System.Web.Mvc.ActionResult Edit(Models.Course)",
+          "scope": "tiger_dll.Tiger.Controllers.CoursesController"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "1370808024",
+        "prototype_hash": "3602206751",
+        "flaw_hash": "1370808024",
+        "flaw_hash_count": 1,
+        "flaw_hash_ordinal": 1,
+        "cause_hash": "0",
+        "cause_hash_count": 0,
+        "cause_hash_ordinal": 0,
+        "cause_hash2": "0",
+        "cause_hash2_ordinal": "0"
+      },
+      "stack_dumps": {},
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v5/net/352.html"
+    },
+    {
+      "title": "DeleteConfirmed",
+      "issue_id": 1002,
+      "gob": "B",
+      "severity": 3,
+      "issue_type_id": "crypto",
+      "issue_type": "Cross-Site Request Forgery (CSRF)",
+      "cwe_id": "352",
+      "display_text": "\u003cspan\u003eThe ASP.NET MVC Core Controller action does not appear to have protection against cross-site request forgery attacks. The DeleteConfirmed() action could allow a malicious web application to influence the interactions between (trusted) client browser and web-server. If the application relies on authentication tokens that are stored inside of a cookie, this attack is possible because the browser will automatically include this cookie with every request.\u003c/span\u003e\u003cspan\u003eMake sure to use the built-in anti-forgery token support of ASP.NET MVC Core. By default the ASP.NET MVC FormHelper will inject a token in each of the used Views. Each Controller HTTP POST action method needs to be annotated with [ValidateForgeryToken] or use [AutoValidateAntiforgeryToken] annotation on the Controller class. It\u0027s also possible to apply AutoValidateForgeryTokenAttribute as a filter in the MVC pipeline which will remove the need for each method being annotated separately. This uses a Synchronizer Token Pattern (STP) that will add the nonce (unique and unpredictable) to each request that can be verified on the server side and unable for an attacker to predict.\u003c/span\u003e\u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/352.html\"\u003eCWE\u003c/a\u003e\u003ca href\u003d\"https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery\"\u003ePrevent Cross-Site Request Forgery (XSRF/CSRF) attacks in ASP.NET Core\u003c/a\u003e\u003ca href\u003d\"https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md\"\u003eOWASP\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "a/1/s/tiger/controllers/coursescontroller.cs",
+          "line": 107,
+          "function_name": "DeleteConfirmed",
+          "qualified_function_name": "tiger_dll.Tiger.Controllers.CoursesController.DeleteConfirmed",
+          "function_prototype": "System.Web.Mvc.ActionResult DeleteConfirmed(int)",
+          "scope": "tiger_dll.Tiger.Controllers.CoursesController"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "3019626088",
+        "prototype_hash": "1425862085",
+        "flaw_hash": "3019626088",
+        "flaw_hash_count": 1,
+        "flaw_hash_ordinal": 1,
+        "cause_hash": "0",
+        "cause_hash_count": 0,
+        "cause_hash_ordinal": 0,
+        "cause_hash2": "0",
+        "cause_hash2_ordinal": "0"
+      },
+      "stack_dumps": {},
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v5/net/352.html"
+    },
+    {
+      "title": "get_Title",
+      "issue_id": 1003,
+      "gob": "B",
+      "severity": 2,
+      "issue_type_id": "crypto",
+      "issue_type": "ASP.NET Misconfiguration: Improper Model Validation",
+      "cwe_id": "1174",
+      "display_text": "\u003cspan\u003eThe Controller\u0027s Action has a model that fails to perform Model Validation due to a lack of Data Annotations on the Model. This could expose the application to other weaknesses related to insufficient input validation.\u003c/span\u003e \u003cspan\u003eBe sure to add Data Annotation attributes on each property of the Model. For example, to validate a credit card number use the CreditCardAttribute. For validation that is more flexible use RegularExpressionAttribute or CustomValidationAttribute. These data annotations can be found in the System.ComponentModel.DataAnnotations namespace. Note: This flaw used to be reported as CWE 100, which has been deprecated by MITRE.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/1174.html\"\u003eCWE\u003c/a\u003e \u003ca href\u003d\"https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation\"\u003eModels and Validation in ASP.NET Core MVC\u003c/a\u003e \u003ca href\u003d\"https://msdn.microsoft.com/en-us/library/ee256141(v\u003dvs.100).aspx\"\u003eHow to: Validate Model Data Using DataAnnotations Attributes\u003c/a\u003e \u003ca href\u003d\"https://docs.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api\"\u003eModel Validation in ASP.NET Web API\u003c/a\u003e\u003c/span\u003e",
+      "files": {
+        "source_file": {
+          "file": "a/1/s/tiger/models/course.cs",
+          "line": 9,
+          "function_name": "get_Title",
+          "qualified_function_name": "tiger_dll.Tiger.Models.Course.get_Title",
+          "function_prototype": "string get_Title()",
+          "scope": "tiger_dll.Tiger.Models.Course"
+        }
+      },
+      "flaw_match": {
+        "procedure_hash": "1510674785",
+        "prototype_hash": "3850940339",
+        "flaw_hash": "1510674785",
+        "flaw_hash_count": 1,
+        "flaw_hash_ordinal": 1,
+        "cause_hash": "0",
+        "cause_hash_count": 0,
+        "cause_hash_ordinal": 0,
+        "cause_hash2": "0",
+        "cause_hash2_ordinal": "0"
+      },
+      "stack_dumps": {},
+      "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v5/net/1174.html"
+    }
+  ],
+  "pipeline_scan": "22.12.0-0",
+  "dev_stage": "DEVELOPMENT"
+}
